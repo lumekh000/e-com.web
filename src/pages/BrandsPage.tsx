@@ -1,8 +1,8 @@
 import React from 'react';
 import { BRANDS } from '../data/brands';
 import { useStore } from '../context/StoreContext';
-import { ArrowRight, Award } from 'lucide-react';
-import { ProductCategory } from '../types';
+import { ArrowRight } from 'lucide-react';
+import type { ProductCategory } from '../types';
 
 export const BrandsPage: React.FC = () => {
   const { navigate, setSelectedCategory } = useStore();

@@ -10,10 +10,7 @@ import {
   RotateCcw,
   ShieldCheck,
   CheckCircle2,
-  Share2,
-  ArrowLeft,
-  Sparkles,
-  MessageSquare
+  ArrowLeft
 } from 'lucide-react';
 
 export const ProductDetailPage: React.FC = () => {
@@ -390,6 +387,23 @@ export const ProductDetailPage: React.FC = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleAddReview} className="space-y-3">
+                    <div className="flex items-center gap-1 mb-1">
+                      <span className="text-xs font-semibold text-[#063D30] mr-2">Rating:</span>
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <button
+                          key={star}
+                          type="button"
+                          onClick={() => setNewReviewRating(star)}
+                          className="p-0.5"
+                        >
+                          <Star
+                            className={`w-4 h-4 ${
+                              star <= newReviewRating ? 'text-amber-400 fill-amber-400' : 'text-gray-300'
+                            }`}
+                          />
+                        </button>
+                      ))}
+                    </div>
                     <div className="grid grid-cols-2 gap-3">
                       <input
                         type="text"

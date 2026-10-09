@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
 import { ProductCard } from '../components/common/ProductCard';
-import { Heart, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Heart, ArrowRight } from 'lucide-react';
 
 export const WishlistPage: React.FC = () => {
   const { wishlist, products, navigate } = useStore();

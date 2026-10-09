@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { ShippingAddress } from '../types';
+import type { ShippingAddress } from '../types';
 import {
   ShieldCheck,
   CreditCard,
   Truck,
   Lock,
-  CheckCircle2,
   ArrowRight,
   Sparkles
 } from 'lucide-react';
@@ -64,7 +63,7 @@ export const CheckoutPage: React.FC = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      const order = createOrder(address, paymentMethod === 'card' ? 'Visa ending in 4242' : paymentMethod === 'apple' ? 'Apple Pay' : 'PayPal');
+      createOrder(address, paymentMethod === 'card' ? 'Visa ending in 4242' : paymentMethod === 'apple' ? 'Apple Pay' : 'PayPal');
       setIsSubmitting(false);
       navigate('order-confirmation');
     }, 1000);

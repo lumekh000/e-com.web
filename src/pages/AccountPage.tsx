@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { User, Package, MapPin, LogOut, Settings, Heart, ShieldAlert } from 'lucide-react';
+import { User, Package, MapPin, LogOut, Heart, ShieldAlert } from 'lucide-react';
 
 export const AccountPage: React.FC = () => {
   const { user, isLoggedIn, logoutUser, orders, navigate } = useStore();

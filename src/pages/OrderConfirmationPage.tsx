@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { CheckCircle2, PackageCheck, Printer, ArrowRight, Truck } from 'lucide-react';
+import { CheckCircle2, PackageCheck, Printer } from 'lucide-react';
 
 export const OrderConfirmationPage: React.FC = () => {
   const { lastPlacedOrder, navigate } = useStore();

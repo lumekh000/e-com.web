@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { Order, OrderStatus } from '../types';
-import { Search, Package, Truck, CheckCircle2, Clock, MapPin } from 'lucide-react';
+import type { Order, OrderStatus } from '../types';
+import { Search, CheckCircle2, MapPin } from 'lucide-react';
 
 export const TrackOrderPage: React.FC = () => {
   const { orders, searchOrderTracking } = useStore();

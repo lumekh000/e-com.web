@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
-import { Trash2, ShoppingBag, ArrowRight, ArrowLeft, Tag, Truck } from 'lucide-react';
+import { Trash2, ShoppingBag, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export const CartPage: React.FC = () => {
   const {

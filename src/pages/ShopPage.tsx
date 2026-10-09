@@ -3,16 +3,11 @@ import { useStore } from '../context/StoreContext';
 import { ProductCard } from '../components/common/ProductCard';
 import { CATEGORIES } from '../data/categories';
 import { BRANDS } from '../data/brands';
-import { ProductCategory } from '../types';
 import {
   Filter,
   X,
-  SlidersHorizontal,
-  ChevronDown,
   Search,
-  RotateCcw,
-  Sparkles,
-  Check
+  RotateCcw
 } from 'lucide-react';
 
 export const ShopPage: React.FC = () => {
@@ -396,6 +391,36 @@ export const ShopPage: React.FC = () => {
           </div>
 
         </div>
+
+        {/* Mobile Filter Modal Drawer */}
+        {mobileFilterOpen && (
+          <div className="fixed inset-0 z-50 lg:hidden flex">
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileFilterOpen(false)} />
+            <div className="relative ml-auto w-full max-w-xs bg-white h-full p-6 overflow-y-auto shadow-2xl flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
+                  <h3 className="font-serif font-bold text-lg text-[#17231E]">Filters & Sorting</h3>
+                  <button onClick={() => setMobileFilterOpen(false)} className="p-1 text-gray-400 hover:text-gray-600">
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <p className="text-xs text-[#6D746E] mb-4">Refine catalog products on mobile.</p>
+                <button
+                  onClick={() => { handleClearFilters(); setMobileFilterOpen(false); }}
+                  className="w-full bg-[#063D30] text-[#DCE6D2] py-2.5 rounded-full text-xs font-bold mb-4"
+                >
+                  Reset All Filters
+                </button>
+              </div>
+              <button
+                onClick={() => setMobileFilterOpen(false)}
+                className="w-full bg-[#063D30] text-white py-3 rounded-full text-xs font-bold uppercase tracking-wider"
+              >
+                Apply & View ({filteredProducts.length}) Results
+              </button>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>

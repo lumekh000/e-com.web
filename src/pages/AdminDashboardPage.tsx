@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import { useStore } from '../context/StoreContext';
-import { Product, OrderStatus } from '../types';
+import type { Product, OrderStatus } from '../types';
 import {
   ShieldAlert,
-  DollarSign,
-  ShoppingBag,
-  Users,
-  AlertTriangle,
   Plus,
   Edit3,
   Trash2,
-  CheckCircle2,
-  X,
-  Package,
-  Sliders,
-  Eye
+  X
 } from 'lucide-react';
 
 export const AdminDashboardPage: React.FC = () => {
@@ -25,7 +17,6 @@ export const AdminDashboardPage: React.FC = () => {
     adminDeleteProduct,
     adminOrders,
     adminUpdateOrderStatus,
-    user,
     navigate
   } = useStore();
 

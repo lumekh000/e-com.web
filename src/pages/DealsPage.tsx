@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStore } from '../context/StoreContext';
 import { ProductCard } from '../components/common/ProductCard';
-import { Tag, Sparkles, Flame, Clock } from 'lucide-react';
+import { Flame, Clock } from 'lucide-react';
 
 export const DealsPage: React.FC = () => {
   const { products } = useStore();

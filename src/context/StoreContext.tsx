@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import {
+import type {
   Product,
   CartItem,
   Coupon,
@@ -185,7 +185,6 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [routeParams, setRouteParams] = useState<Record<string, any>>({});
 
   // Products
-  const [products] = useState<Product[]>(PRODUCTS);
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(PRODUCTS[0]);
   const [searchQuery, setSearchQuery] = useState<string>('');

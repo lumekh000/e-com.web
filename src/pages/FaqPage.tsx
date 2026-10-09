@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, Search } from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 
 export const FaqPage: React.FC = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);

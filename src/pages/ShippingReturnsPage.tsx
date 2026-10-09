@@ -1,5 +1,5 @@
 import React from 'react';
-import { Truck, RotateCcw, ShieldCheck } from 'lucide-react';
+import { Truck, RotateCcw } from 'lucide-react';
 
 export const ShippingReturnsPage: React.FC = () => {
   return (

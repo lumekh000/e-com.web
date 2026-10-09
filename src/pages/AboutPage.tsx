@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Award, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { Leaf, Award, Heart } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 
 export const AboutPage: React.FC = () => {
